@@ -17,13 +17,13 @@ mode = None
 
 # Functions
 
-# Basic input
+'''Basic input'''
 def aquire_input(num, mode):
     mode = ioutil.get_mode(ml)
     num = ioutil.get_num()
     return num, mode
 
-# Calculate result
+'''Calculate result'''
 def calculate(num, mode):
     result = None
     match mode:
@@ -35,7 +35,7 @@ def calculate(num, mode):
             result = num[1] / num[1]
     return result
 
-# Output result
+'''Output result'''
 def output(result, mode):
     print(f"The {ml.Modes(mode).name} is: {result}{ml.units[ml.Modes(mode)]}")
 

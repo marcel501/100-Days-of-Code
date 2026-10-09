@@ -10,11 +10,11 @@ MAX_NUM = 2
 
 # Functions
 
-# Greet script
+'''Greet script'''
 def greet():
     print("## Simple force calculator ##", end="\n\n")
 
-# Mode input
+'''Mode input'''
 def get_mode(mathlib):
     # 1. Print choices
     print("Available modes:")
@@ -28,7 +28,7 @@ def get_mode(mathlib):
     # 3. Return
     return mode
 
-# Number input
+'''Number input'''
 def get_num():
     for i in range(MAX_NUM - 1):
         num = list(map(int, input("Enter numbers: ").split()))
