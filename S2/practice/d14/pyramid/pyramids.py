@@ -1,58 +1,82 @@
-# Python pyramids module
+'''
+Triangle printing algorithms
 
+
+'''
+
+
+import utilities as util
+
+
+# Printer control
 
 ''' Call appropriate printer function '''
-def printer(value):
+def printer(value, height):
     if (value == "equilateral"):
-       equilateral()
+       equilateral(height)
     elif (value == "isosceles"):
-        isosceles()
+        isosceles(height)
     elif (value == "scalene"):
-        scalene()
+        scalene(height)
     elif (value == "right"):
-        right()
+        right(height)
     elif (value == "acute"):
-        acute()
+        acute(height)
     elif (value == "obtuse"):
-        obtuse()
+        obtuse(height)
     else:
         return False
 
 
 # Printer functions
 
-def equilateral():
-    print("triangle1")
-    # TODO: define triangle algorithm
+def equilateral(height):
+    '''
+             #
+            ###
+           #####
+          #######
+         #########
+        ###########
+    '''
+    util.logger.info("equilateral")
+    for row in range(0, height):
+        print(" " * (height - row), end="")                 
+        print("#" * (2*row + 1), end="") 
+        print()                                
 
 
-def isosceles():
+def isosceles(height):
+    '''
+    '''
     print("triangle2")
     # TODO: define triangle algorithm
 
 
-def scalene():
+def scalene(height):
     print("triangle3")
     # TODO: define triangle algorithm
 
 
-def right():
+def right(height):
+    '''
+            #
+           ##
+          ###
+         ####   
+        #####
+    '''
     print("triangle4")
     # TODO: define triangle algorithm
 
 
-def acute():
+def acute(height):
     print("triangle5")
     # TODO: define triangle algorithm
 
 
-def obtuse():
+def obtuse(height):
     print("triangle6")
-    # TODO: define triangle algorithm
-
-
-def equilateral():
-    print("triangle7")
     # TODO: define triangle algorithm
 
 

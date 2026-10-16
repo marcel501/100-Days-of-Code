@@ -1,39 +1,42 @@
-#
-# Python pyramid printer
-#
+'''
+Print a specified triangle of varying height to terminal. 
+
+'''
 
 
-import pyramids
 import sys
 import utilities as util
 
 
-ARG_NUM = 2
+HEIGHT = 6
 
 
-''' Main program execution flow'''
 def main():
-    launch(convert(validate(sys.argv)))    
+    launch(convert(get_input()))    
 
 
-''' Validate provided arguments '''
-def validate(i):
-    if not (len(i) == ARG_NUM):
-        sys.exit("Incorrect number of arguments")
-    elif i[1].isalpha() == False:
-        sys.exit("Alphabetic characters only")
-    else:
-        return i[1]
+''' Get & validate the user input '''
+def get_input():
+    string_in = input("Enter triangle name: ")
+    while True:
+        if string_in.isalpha() == True:
+            break
+        else:
+            sys.exit("Alphabetic characters only")
+    return string_in
 
 
-''' Convert argument to a standard format '''
+''' 
+Convert argument to a standard format 
+Standard form: lower-case    
+'''
 def convert(i):
     return i.lower()
 
 
 ''' Launch printer '''
 def launch(value):
-    if pyramids.printer(value) == False:
+    if __import__('pyramids').printer(value, HEIGHT) == False:
         sys.exit("Pyramid type not found")
 
 
