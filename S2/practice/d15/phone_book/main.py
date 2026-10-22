@@ -9,10 +9,12 @@ import csv
 import sys
 import re
 import os
+
+sys.path.insert(0, "./src/")
 import utilities as utils
 
 
-modes = ["Read(r)", "Write(w)"]
+modes = {"Read(r)": 'r', "Write(w)": 'w'}
 headers = ["Name", "Surname", "Number", "Address"]
 
 
@@ -56,19 +58,61 @@ def setup_database(filename):
 
 def mode_select():
     utils.logger.info("Fetching the mode")
-    # TODO: Print prompt and get mode input from user
-        # Develop a list of modes
-    utils.logger.info("mode select")
+
+    def print_modes():
+        print("Available modes:")
+        for mode in modes:
+            print(mode)
+
+
+    print_modes()    
+    while True:
+        ## Potential try clause
+        mode = input("Select a mode: ").tolower()
+        if mode in modes.values():
+            return mode
+        else:
+            print("Invalid mode!")
+            print_modes()
 
 
 def file_operations(mode, filename):
     utils.logger.info("Executing file operation")
+    
     # TODO: Develop read/ write functions
-        # TODO: Read: Add prompt and feedback
-        # TODO: Write: Add multiple prompts for each element header 
-    # TODO: Include conditional logic for mode
-    utils.logger.info("File operations")
+    
+    def read_ops(name):
+        with open(filename, 'r', newline="") as file:
+            while True:
+                #if name is in filename.csv
+                    #Print the record
+                    #break
+                #if name is not in filename.csv
+                   #repeat loop 
 
+
+    def write_ops():
+            #Ask for name
+            #Ask for surname
+            #Ask for number
+            #Ask for address
+
+            #Print the staged record
+            #Prompt the user if submit or not
+                # If not, then return
+                # If yes, continue
+
+        with open(filename, 'a', newline="") as file:
+            #Commit the staged record into file
+
+
+    if mode == modes("read(r)").values():
+        # TODO: Read: Add prompt and feedback
+        read_ops(input("Please enter the name: ").tolower())
+
+    elif mode == modes("write(w)").values():
+        # TODO: Write: Add multiple prompts for each element header 
+    
 
 if __name__ == "__main__":
     main(sys.argv)
