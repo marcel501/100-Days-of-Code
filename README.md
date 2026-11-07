@@ -11,3 +11,5 @@ The aim is to provide a public, view only repository for reading various content
 ## Overview 📃
 
 The contents of this repository will be allocated within a logically defined structure. This structure will fundamentally correspond to the project phases.
+
+
