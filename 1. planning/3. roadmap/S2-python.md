@@ -4,6 +4,8 @@ Python roadmap
 # Intro to python
 
 
+
+
 ## Formal definition
 
 - Type of computer language
@@ -12,7 +14,11 @@ Python roadmap
 - Paradigm
 
 
+
+
 ## Short background
+
+
 
 
 ## Elements of language
@@ -21,6 +27,8 @@ Python roadmap
     - Charsets
 - Semantics
 - Syntax
+
+
 
 
 ## Important sources
@@ -32,46 +40,108 @@ Python roadmap
 
 
 
+
+
 # Core python
+
+
 
 
 ## Hello world program
 
 
+
+
 ## Basic IO
+
+
 
 
 ## Variables & data structures
 
 
+
+
 ## Basic control flow
+
+
 
 
 ## Functions & modules
 
 
-## Files
+
+
+## Error handling
+
+
+
+
+## Debugging
+
+
+
+
+## File handling
+
+
 
 
 
 # Object oriented python
 
 
+
+
 ## OOP intro
+
+
+
+
+## Models
+
+
 
 
 
 # Mathematics in programming
 
 
+
+
 ## Discrete
 
 
 
-# Projects 
+
+## Algorithms
+
+
+
+
+
+# Application
+
+
 
 
 ## Engineering calculator
+
+
+
+
+
+## Documentation
+
+
+
+
+## Optional project
+
+Simple pac-man style game:
+- Game logic
+- Graphics
+- Stage management
 
 
 
