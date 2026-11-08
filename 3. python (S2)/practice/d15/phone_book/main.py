@@ -38,10 +38,13 @@ def validate_args(arg):
 
 def setup_database(filename):
     utils.logger.info("Setting up the database...")
+    
+    # Create file
     if not os.path.exists(filename):
         open(filename, 'x', newline="")
         close(filename)
     
+    # Add headers
     with open(filename, 'r+', newline="") as file:
         file.seek(0)
         try:
@@ -68,7 +71,7 @@ def mode_select():
     print_modes()    
     while True:
         ## Potential try clause
-        mode = input("Select a mode: ").tolower()
+        mode = input("Select a mode: ").lower()
         if mode in modes.values():
             return mode
         else:
@@ -79,40 +82,57 @@ def mode_select():
 def file_operations(mode, filename):
     utils.logger.info("Executing file operation")
     
-    # TODO: Develop read/ write functions
-    
-    def read_ops(name):
+    def read_ops(name, filename):
         with open(filename, 'r', newline="") as file:
             while True:
-                #if name is in filename.csv
-                    #Print the record
-                    #break
-                #if name is not in filename.csv
-                   #repeat loop 
+                if name in csv.DictReader(file, name):
+                    print(name)
+                    break
 
 
-    def write_ops():
-            #Ask for name
-            #Ask for surname
-            #Ask for number
-            #Ask for address
+    def write_ops(filename):
 
-            #Print the staged record
-            #Prompt the user if submit or not
-                # If not, then return
-                # If yes, continue
-
-        with open(filename, 'a', newline="") as file:
-            #Commit the staged record into file
+        def decision():
+            while True:
+                prompt = input("Are you sure you want to submit? (y/n): ").lower()
+                if prompt == 'y':
+                    return 'y'
+                elif prompt == 'n':
+                    return 'n'
 
 
-    if mode == modes("read(r)").values():
-        # TODO: Read: Add prompt and feedback
-        read_ops(input("Please enter the name: ").tolower())
+        def write_to_file(stage, filename):
+            with open(filename, 'a', newline="") as file:
+                writer = csv.DictWriter(file, fieldnames=headers)
+                writer.writerow(stage)
 
-    elif mode == modes("write(w)").values():
-        # TODO: Write: Add multiple prompts for each element header 
-    
+
+        stage = {"Name": None, "Surname": None, "Number": None, "Address": None}
+
+        while True:
+            # Data entry
+            stage["Name"] = input("Enter name: ")
+            stage["Surname"] = input("Enter surname: ")
+            stage["Number"] = input("Enter number: ")
+            stage["Address"] = input("Enter address: ")
+
+            # Print the staged record
+            print(stage)
+
+            # Prompt the user if submit or not
+            match decision():
+                case 'y':
+                    write_to_file(stage, filename)
+                    break
+                case 'n':
+                    print("Record discarded")
+
+
+    if mode == modes["Read(r)"]:
+        read_ops(input("Please enter the name: ").lower(), filename)
+    elif mode == modes["Write(w)"]:
+        write_ops(filename)
+
 
 if __name__ == "__main__":
     main(sys.argv)
