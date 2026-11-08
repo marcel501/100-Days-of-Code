@@ -47,12 +47,9 @@ Python roadmap
 
 
 
-## Hello world program
-
-
-
-
 ## Basic IO
+
+- Hello world program
 
 
 
@@ -62,17 +59,51 @@ Python roadmap
 
 
 
-## Basic control flow
+## Control flow
+
+
+### Logical execution
+
+
+### Iterative execution
+
+- Basic iteration: For, While
+- comprehensions
+
+
+
+## Functions
+
+
+### Custom functions
+
+
+### Special functions
+
+- Lambda
+- Generator
 
 
 
 
-## Functions & modules
+## Modules
+
+
+### Built-in modules
+
+
+### Custom modules
+
+
+### External modules
 
 
 
 
 ## Error handling
+
+- Try
+- Defensive programming
 
 
 
@@ -84,6 +115,8 @@ Python roadmap
 
 ## File handling
 
+- CSV
+- TXT
 
 
 
