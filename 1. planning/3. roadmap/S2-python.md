@@ -16,7 +16,10 @@ Python roadmap
 
 
 
-## Short background
+## Background
+
+- Relation to other languages
+- Basis
 
 
 
@@ -75,13 +78,52 @@ Python roadmap
 ## Functions
 
 
-### Custom functions
+
+### Builtin functions
+
+
+
+### User defined
+
+
+#### Termination
+- Basic (None, Return, Pass)
+
+
+#### Arguments
+- Basic
+- Arbitrary (*args, **kwargs)
+
+
+#### Argument unpacking
+
+
+#### Scope
+- Local
+- Global
+- Nonlocal
+
 
 
 ### Special functions
 
-- Lambda
-- Generator
+
+#### Decorator
+Function taking another function as input to add extra behaviour.
+
+
+#### Lambda
+Anonymous function
+
+
+#### Generator
+- Yield
+
+
+
+### Recursion
+- Base case
+- Recursive case
 
 
 
