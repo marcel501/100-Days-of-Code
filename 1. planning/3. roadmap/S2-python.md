@@ -202,11 +202,52 @@ Anonymous function
 
 ## Engineering calculator
 
+The engineering calculator is to be developed in successive rounds rather than linearly. This allows the project to evolve with the ever growing competency in programming.
+
+To aid in development a structured level system is implemented for each round:
 
 
 
+### Level 1: Basic calculations
 
-## Documentation
+- Force
+- Mass
+- Velocity
+- Acceleration
+- Pressure
+- Density
+- Energy
+
+
+
+### Level 2: Mechanical calculations
+
+- Stress
+- Strain
+- Young's modulus / Elastic modulus
+- Torque
+- Power
+- Efficiency
+
+
+
+### Level 3: Structural calculations
+
+- Beams
+- Bending moment
+- Shearing
+- Deflection
+- Factor of safety
+
+
+
+### Level 4: Engineering utility
+
+- Unit conversion
+- Menu
+- Data storage
+- Documentation
+- Tests
 
 
 
