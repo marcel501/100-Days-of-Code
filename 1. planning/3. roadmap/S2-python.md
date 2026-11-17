@@ -214,9 +214,9 @@ To aid in development a structured level system is implemented for each round:
 - Mass
 - Velocity
 - Acceleration
-- Pressure
 - Density
-- Energy
+- Power
+- Efficiency
 
 
 
@@ -224,10 +224,9 @@ To aid in development a structured level system is implemented for each round:
 
 - Stress
 - Strain
+- Pressure
 - Young's modulus / Elastic modulus
 - Torque
-- Power
-- Efficiency
 
 
 
